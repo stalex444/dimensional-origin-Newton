@@ -22,7 +22,7 @@ Result: Exactly one pair passes all five — the Pisot boundary pair (ρ, Q)
 from x³ = x + 1 and x⁴ = x + 1. Combined error: 0.41%.
 
 Reference: S. Alexander, "The Dimensional Origin of Newton's Constant" (2026).
-Repository: https://github.com/stalex444/pdt-closure-mc
+Repository: https://github.com/stalex444/dimensional-origin-Newton
 """
 
 import numpy as np
@@ -31,13 +31,12 @@ from collections import defaultdict
 # ============================================================
 # PHYSICAL CONSTANTS (5 simultaneous constraints)
 # ============================================================
-targets = {
-    'alpha_inv': 137.035999,     # CODATA 2022
-    'sin2_theta_W': 0.23121,     # PDG 2024
-    'Y_p': 0.2449,              # Schramm & Turner (1998)
-    'alpha_s': 0.1180,          # PDG 2024, at M_Z
-    'm_tau_m_e': 3477.2,        # PDG 2024
-}
+# Reference values used in the tests below:
+#   alpha_inv   = 137.036       CODATA 2022 (137.035999...)
+#   sin2_theta_W = 0.23121      PDG 2024
+#   Y_p         = 0.2449        Schramm & Turner (1998)
+#   alpha_s     = 0.1180        PDG 2024, at M_Z
+#   m_tau/m_e   = 3477.2        PDG 2024
 
 # ============================================================
 # GENERATE CANDIDATES
